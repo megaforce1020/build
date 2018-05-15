@@ -32,16 +32,16 @@ pipeline {
 			}
 		}
 
-		stage('Parallel') {agent any
+		stage('Parallel') {
 			failFast true
 			parallel {
-				stage('Build 1') {
+				stage('Build 1') {agent any
 					steps {
 						echo "It's ME!"
 					}
 				}
 
-				stage('Build 2') {
+				stage('Build 2') {agent any
 					steps {
 						echo "Not it's me!"
 					}
