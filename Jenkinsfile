@@ -1,8 +1,17 @@
+@Library('shared-library')
+
 pipeline {
 	agent none
 	environment {
 		NODE_VER = '8.1.0'
 	}
+
+	/*
+	post {
+		success
+		failed
+	}
+	*/
 
 	stages {
 		stage('Beginning') { agent any
@@ -44,6 +53,7 @@ pipeline {
 				stage('Build 1') {agent any
 					steps {
 						echo "It's ME!"
+						will()
 					}
 				}
 
