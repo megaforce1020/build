@@ -16,10 +16,10 @@ pipeline {
 		}
 
 		stage('Who Am I?') { agent any
-			steps {
-				environment {
+			environment {
 				DEPLOY_VERSION = 'prod'
 			}
+			steps {
 				echo "${env.NEW_VAR}"
 				sh 'host -t TXT pgp.michaelholley.us |awk -F \'"\' \'{print $2}\''
 			}
