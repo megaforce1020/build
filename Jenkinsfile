@@ -1,4 +1,3 @@
-#Hello World Jenkinsfile
 
 pipeline {
 	agent none
